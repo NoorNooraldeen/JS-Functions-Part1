@@ -4,19 +4,32 @@ function printName(firstName, lastName) {
 printName(`Noor`, `NoorALDeen`);
 
 function printAge(birthYear) {
-  const age = birthYear - 2024;
-  console.log(`${birthYear}`);
+  //const currentYear = newDate().getFullYear();
+  const age = 2024 - birthYear;
+  console.log(` age is ${age} `);
+
+  //const age = birthYear - 2024;
+  //console.log(`${birthYear}`);
 }
 
 printAge(2001);
 
 function printAgeAndName(birthYear, name) {
-  console.log(`hello ${birthYear} you are ${name}years old`);
+  const currentYear = newDate().getFullYear();
+  const age = currentYear - birthYear;
+  console.log(`hello ${name} you are ${age}years old`);
 }
-printAgeAndName(`sara`, 27);
+printAgeAndName(27, `sara`);
+//printAgeAndName(1996, `sara`); assuming birth year
 
-function printHello(language, name) {
-  console.log(`${language}  ${name}`);
+function printHello(name, language) {
+  const greeting = {
+    es: `hola ${name}`,
+    en: `hello ${name}`,
+    fr: `bonjour ${name}`,
+    tr: `merhaba ${name}`,
+  };
+  console.log(`${name}  ${language}`);
 }
 printHello("hello", "noor");
 printHello("hola", "noor");
